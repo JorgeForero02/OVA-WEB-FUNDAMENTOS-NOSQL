@@ -169,7 +169,8 @@ var LMSProxyFuncs = pick(LMSProxySelections, window.parent, Function.prototype);
 
 function noAPIFunction (funcName) {
   return function () {
-    console.log('Warning: Course was unable to find the LMS API for ' + funcName + '. Course may have been launched from scormcontent/index.html, or the course package is not within an LMS. Saving of student data will not occur.');
+    // console.log silenced: running standalone without LMS is intentional
+    // console.log('Warning: Course was unable to find the LMS API for ' + funcName + '. Course may have been launched from scormcontent/index.html, or the course package is not within an LMS. Saving of student data will not occur.');
   }
 }
 
